@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd
+        ">
+
+    <context:annotation-config/>
+    
+    <!--  
+   
+   
+    <bean  class="com.springCore.autowiringBean.StudentFees" name="studfees">
+          <property name="fees" value="12000"></property>
+    </bean>
+    
+    <bean class="com.springCore.autowiringBean.Student"  name="fee1">
+        <property name="name" value="Shilpa"></property>
+        <property name="Course" value="Csc"></property>
+        <property name="studfees">
+            <ref bean="studfees" ></ref>
+        </property>
+    </bean>
+        
+    <bean class="com.springCore.autowiringBean.Address" name="address1">
+       <property name="street" value="AyyapaNagar{Bangalore}"></property>
+       <property name="Dist" value="Katihar"></property>
+    </bean>
+    
+    <bean class="com.springCore.autowiringBean.Address" name="address">
+       <property name="street" value="NewYork{Buffalo}"></property>
+       <property name="Dist" value="TimeSquare"></property>
+    </bean>
+    
+    
+    <bean class="com.springCore.autowiringBean.Emp"  name="emp1" autowire="byName"></bean>
+   
+    
+    -->
+    <!-- standalone list , util schema -->
+    
+    <util:list  list-class="java.util.LinkedList" id="peoples">
+         <value>Windy</value>
+         <value>Jessica</value>
+         <value>Larson </value>
+         <value>Chestein</value>
+    
+    </util:list>
+    
+    <util:map  map-class="java.util.HashMap"   id ="CF">
+        <entry key="Spring FrameWork"  value="12000"  />
+        <entry key="Django FrameWork"   value="8000"    />
+        <entry  key="Hibernate"  value="2000" />
+    
+    </util:map>
+    
+    
+    
+    <bean class="com.springCore.standalone.collection.Person"  name="person1" >
+     <!--   <property name="friends">
+            <ref bean="peoples"></ref>
+           </property>
+       -->
+       <property name="friends" ref="peoples" />
+       <property name="feesStr" ref="CF"   />
+       <property name="prop" ref="dbconfig"></property>
+    </bean>
+    
+    <!-- StandAlone Properties -->
+    
+    <util:properties   id="dbconfig">
+    <prop key="driver">com.mysql.cj.jdbc.Driver</prop>
+    <prop key="username">root@Shilpa</prop>
+    <prop key="password">My@Sql1234</prop>
+    
+    
+    </util:properties>
+    
+   
+    
+</beans>

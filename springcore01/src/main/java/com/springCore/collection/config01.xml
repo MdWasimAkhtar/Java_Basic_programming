@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here  
+     This Our bean , meta data to spring container 
+    -->
+    <bean class="com.springCore.collection.Emp" name="emp1">
+             <property name="EmpName" value="Benazir"></property>
+             
+             <property name="phones">
+                 <list>
+                     <value>8217845310</value>
+                      <value>776208923</value>
+                       <value>9430277496</value>
+                        <value>8877338023</value>
+                 </list>
+             </property>
+             
+             <property name="addresses">
+                <set>
+                      <value>Bihar</value>
+                      <value>Bangalore </value>
+                      <value>Mysore</value>
+                </set>
+             </property>
+             
+             <property name="courses">
+                     <map>
+                        <entry key="Java" value="2 month"></entry>
+                        <entry key="Python" value="2.5 month"></entry>
+                        <entry key="C#" value="1.5 month"></entry>
+                     </map>
+             </property>
+    </bean>
+
+</beans>

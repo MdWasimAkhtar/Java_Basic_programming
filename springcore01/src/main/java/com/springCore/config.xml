@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here  
+     This Our bean , meta data to spring container 
+    -->
+    
+    
+    <bean class="com.springCore.Student"  name=" student1">
+        
+              <property name="studentId" value="355">
+             
+              </property>
+              
+              <property name="studentName">
+               <value>Shilpa</value>
+              </property>
+              
+              <property name="studentAddress">
+              <value>Ayyapa Nagar , Bangalore , 355509</value>
+              </property>
+        
+    </bean>
+    
+    <!-- 2nd bean -->
+    <bean class="com.springCore.Student"  name=" student2">
+        
+              <property name="studentId" value="358">
+             
+              </property>
+              
+              <property name="studentName">
+               <value>Wasim</value>
+              </property>
+              
+              <property name="studentAddress">
+              <value>Kr purm  , Bangalore , 355510</value>
+              </property>
+        
+    </bean>
+  <!--    
+    <bean class=" com.springCore.Student" name="student3" 
+     p:studentId="1234" P:studentName="Windy Larson" p:studentAddress="buffalo NewYork" ></bean>
+-->
+
+</beans>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here  
+     This Our bean , meta data to spring container 
+    -->
+    
+    <bean  class="com.springCore.RefInjection.Pages" name="p1">
+         <property name="pages" value="855"></property>
+    </bean>
+    
+    <bean class="com.springCore.RefInjection.Book" name="b1">
+      <property name="bookId" value="161899"></property>
+      <property name="bookName"  value="SpringCore"></property>
+      <property name="page" >
+              <ref bean="p1" ></ref>
+      </property>
+      
+    </bean>
+    
+    
+</beans>    

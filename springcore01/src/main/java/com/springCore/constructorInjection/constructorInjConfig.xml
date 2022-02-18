@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here  
+     This Our bean , meta data to spring container 
+    -->
+    
+    <bean class="com.springCore.constructorInjection.Certificate" name="certi1" >
+        <constructor-arg value="Android Using Kotlin"></constructor-arg>
+    </bean>
+     
+     <bean  class="com.springCore.constructorInjection.Person" name="per1">
+          <constructor-arg type="int"  value="129909"></constructor-arg>
+          <constructor-arg type="String" value="Shilpa"></constructor-arg>
+          
+          <constructor-arg ref="certi1"> </constructor-arg>
+          
+          <constructor-arg type="List">
+                     <list>
+                          <value>Happy Feet</value>
+                          <value>SpringCoreBook</value>
+                          <value>Hibernate</value>
+                     </list>
+          </constructor-arg>
+     
+     </bean>
+     
+</beans>
