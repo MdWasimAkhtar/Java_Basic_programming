@@ -1,0 +1,68 @@
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" 
+ version="4.0">
+  <display-name>DemoServlet</display-name>
+  <!-- 
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  -->
+  
+  <!-- Servlet Decleration -->
+  
+  
+  <servlet> 
+   <servlet-name>first01</servlet-name>
+   <servlet-class>FirstServlet</servlet-class>  
+   </servlet>
+  
+   <servlet-mapping>
+     <servlet-name>first01</servlet-name>
+     <url-pattern>/first01</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet> 
+   <servlet-name>hello</servlet-name>
+   <servlet-class>HelloServlet</servlet-class>  
+   </servlet>
+  
+   <servlet-mapping>
+     <servlet-name>hello</servlet-name>
+     <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet> 
+   <servlet-name>httpTest</servlet-name>
+   <servlet-class>TestHttpServlet</servlet-class>  
+   </servlet>
+  
+   <servlet-mapping>
+     <servlet-name>httpTest</servlet-name>
+     <url-pattern>/httpTest</url-pattern>
+  </servlet-mapping>
+   
+   <servlet> 
+   <servlet-name>second2</servlet-name>
+   <servlet-class>Servlet002</servlet-class>  
+   </servlet>
+   
+ 
+ 
+  
+  <servlet-mapping>
+    <servlet-name>second2</servlet-name>
+    <url-pattern>/second2</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
